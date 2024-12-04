@@ -28,6 +28,6 @@ jobs:
       run: ls -lR
 
     - name: Run tests
-      run: npx jest
+      run: npm test
 
 
