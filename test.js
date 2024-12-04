@@ -1,6 +1,8 @@
+const path = require('path');
 const fs = require('fs');
 
 test('HTML file should contain "Hola Mundo"', () => {
-    const html = fs.readFileSync('./index.html', 'utf8');
+    const htmlPath = path.resolve(__dirname, 'index.html');
+    const html = fs.readFileSync(htmlPath, 'utf8');
     expect(html).toContain('<h1>Hola Mundo</h1>');
 });
