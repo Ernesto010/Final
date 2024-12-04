@@ -21,12 +21,13 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run tests
-      run: npx jest
-
     - name: Fix Jest permissions
       run: chmod +x ./node_modules/.bin/jest
 
     - name: Debug file structure
       run: ls -lR
+
+    - name: Run tests
+      run: npx jest
+
 
